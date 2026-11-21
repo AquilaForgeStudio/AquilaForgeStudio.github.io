@@ -1,0 +1,93 @@
+/* src/components/Footer.module.css */
+.footer {
+    width: 100%;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    padding: 40px 0;
+    color: #4b5563;
+    margin-top: auto; /* 페이지 내용이 적을 때 푸터를 바닥으로 밀어냄 */
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footerBrand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footerLogo {
+    height: 24px;
+    object-fit: contain;
+}
+
+.brandName {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 0.95rem;
+}
+
+.footerDesc {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.footerDivider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 0;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.footerLinks a {
+    font-size: 0.85rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+    color: #f97316; /* 브랜드 오렌지 포인트 */
+}
+
+/* 모바일 화면 대응 */
+@media screen and (max-width: 768px) {
+    .footerTop, .footerBottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
