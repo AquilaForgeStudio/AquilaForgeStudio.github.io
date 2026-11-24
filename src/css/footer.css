@@ -1,4 +1,25 @@
-/* src/components/Footer.module.css */
+/* 범용 박스 사이즈 설정 (패딩이 너비를 밀어내는 현상 방지) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden; /* 모바일 가로 스크롤 및 삐져나감 방지 */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 메인 콘텐츠 영역이 늘어나면서 푸터를 아래로 밀어냄 */
+main {
+    flex: 1;
+}
+
 .footer {
     width: 100%;
     background-color: #f9fafb;
@@ -10,6 +31,7 @@
 
 .footerContainer {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -23,6 +45,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
+    width: 100%;
 }
 
 .footerBrand {
@@ -46,12 +69,14 @@
     font-size: 0.85rem;
     color: #6b7280;
     margin: 0;
+    word-break: keep-all; /* 모바일 글자 줄바꿈 최적화 */
 }
 
 .footerDivider {
     border: none;
     border-top: 1px solid #e5e7eb;
     margin: 0;
+    width: 100%;
 }
 
 .footerBottom {
@@ -60,6 +85,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
+    width: 100%;
 }
 
 .copyright {
@@ -68,26 +94,40 @@
     margin: 0;
 }
 
-.footerLinks {
+.socialLinks {
+    display: flex;       /* 👈 아이템들이 가로로 나란히 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+    gap: 16px;           /* 아이콘들 사이의 간격 */
+}
+
+.socialLinks a {
+    color: #94a3b8;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.footerLinks a {
-    font-size: 0.85rem;
-    color: #4b5563;
-    text-decoration: none;
-    transition: color 0.2s ease;
+.socialLinks a:hover {
+    color: #f97316;
+    transform: translateY(-3px);
 }
 
-.footerLinks a:hover {
-    color: #f97316; /* 브랜드 오렌지 포인트 */
+.socialIcon {
+    width: 22px;
+    height: 22px;
 }
 
-/* 모바일 화면 대응 */
+/* 모바일 화면 대응 (412px 포함 768px 이하) */
 @media screen and (max-width: 768px) {
     .footerTop, .footerBottom {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .footerBottom {
+        flex-direction: column; /* 모바일에서 위아래로 자연스럽게 배치하여 잘림 방지 */
+        align-items: flex-start;
+        gap: 16px;
     }
 }

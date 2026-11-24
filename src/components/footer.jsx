@@ -14,7 +14,7 @@ export default function Footer() {
                         <span className="brandName">{navData.brand.name}</span>
                     </div>
                     <p className="footerDesc">
-                        야구 팬들과 개발자들을 위한 최고의 플랫폼, 아퀼라 베이스볼입니다.
+                        Aquila Forge Studio는 여러 도구를 제공하는 개발스튜디오입니다.
                     </p>
                 </div>
 
@@ -25,14 +25,30 @@ export default function Footer() {
                     <p className="copyright">
                         &copy; {currentYear} {navData.brand.name}. All rights reserved.
                     </p>
-                    <div className="footerLinks">
-                        <a href={`${navData.brand.link}`}>홈</a>
-                        <a href={`${navData.brand.items[0]?.link}`}>설치</a>
-                        <a href={`${navData.brand.items[1]?.link}`}>About Us</a>
-                        <a href="https://aquilaforgestudio.github.io" target="_blank" rel="noopener noreferrer">Studio</a>
-                    </div>
-                </div>
-            </div>
+
+                    <div className="socialLinks">
+                        {navData.brand.socialLinks.map((social, index) => (
+                            <a
+                                key={index}
+                                href={social.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={social.name}
+                            >
+                                <svg
+                                    className="socialIcon"
+                                    viewBox="0 0 16 16"
+                                    width="24"
+                                    height="24"
+                                    fill="currentColor"
+                                >
+                                    <path d={social.icon} />
+                                </svg>
+                            </a>
+                        ))}
+                    </div> {/* 👈 누락되었던 socialLinks 닫는 태그 */}
+                </div>    {/* 👈 누락되었던 footerBottom 닫는 태그 */}
+            </div>        {/* 👈 누락되었던 footerContainer 닫는 태그 */}
         </footer>
     );
 }

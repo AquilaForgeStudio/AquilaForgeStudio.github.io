@@ -1,0 +1,127 @@
+/* src/css/auth.css */
+
+.auth-container {
+    max-width: 420px;
+    margin: 10px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-bottom: 24px;
+    color: #111827;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f97316;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.auth-button:hover {
+    background-color: #ea580c;
+}
+
+/* 소셜 로그인 구분선 */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+    color: #9ca3af;
+}
+
+.auth-divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+}
+
+.auth-divider span {
+    padding: 0 10px;
+    font-size: 0.85rem;
+}
+
+/* 소셜 로그인 버튼 영역 */
+.social-login-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+.google-btn {
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: #374151;
+}
+
+.github-btn {
+    border: none;
+    background-color: #24292e;
+    color: #ffffff;
+}
+
+/* 인라인 에러 메시지 스타일 */
+.input-error-text {
+    display: block;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #ef4444; /* 빨간색 경고 톤 */
+    margin-top: -10px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* 회원가입 전환 링크 스타일 */
+.auth-switch-text {
+    margin-top: 18px;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.auth-switch-text a {
+    color: #f97316; /* 스튜디오 메인 포인트 컬러 */
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.auth-switch-text a:hover {
+    text-decoration: underline;
+}

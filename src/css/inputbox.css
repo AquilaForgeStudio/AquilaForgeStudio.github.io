@@ -1,0 +1,119 @@
+/* src/css/inputbox.css */
+
+.input-box-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.input-field-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-element {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.input-element:focus {
+    border-color: #f97316; /* 스튜디오 포인트 컬러 */
+}
+
+/* 비밀번호 타입일 때 아이콘 공간 확보 */
+.input-element.password-type {
+    padding-right: 45px;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.password-toggle-btn:hover {
+    color: #374151;
+}
+/* src/css/inputbox.css (기존 내용에 아래 내용 추가 또는 병합) */
+
+.input-box-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.input-field-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* input과 select 태그 공통 스타일 (밤티 방지 및 일관성 유지) */
+.input-element, 
+select.input-element {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 1rem;
+    font-family: inherit; /* 폰트 깨짐 방지 */
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #1f2937;
+}
+
+.input-element:focus,
+select.input-element:focus {
+    border-color: #f97316;
+}
+
+.input-element.password-type {
+    padding-right: 45px;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.password-toggle-btn:hover {
+    color: #374151;
+}
