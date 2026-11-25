@@ -75,8 +75,6 @@ export default function Navbar() {
                                 </div>
                             ))}
 
-                            <a href={navData.brand.link} className="cta-install-btn">웹버전 사용하기</a>
-
                             <div className="noti-wrapper" style={{ position: 'relative', display: 'inline-flex', alignItems: 'center' }}>
                                 <button className="noti-trigger-btn" aria-label={navData.actions.notification.ariaLabel} style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '6px', color: '#4b5563' }}>
                                     {notiIconSvg}

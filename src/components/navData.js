@@ -4,10 +4,10 @@ export const navData = {
     brand: {
         name: "Aquila Forge Studio",
         logo: "/Aquila-Logo.png",
-        link: "#/", // 👈 HashRouter 기준 홈 (/#/)
+        link: "/", // 👈 브라우저 라우터 기준 홈 (/)
         items: [
-            { name: "설치", link: "#/" },
-            { name: "About Us", link: "#/about" }
+            { name: "설치", link: "/" },
+            { name: "About Us", link: "/about" }
         ],
         socialLinks: [
             { 
@@ -27,23 +27,23 @@ export const navData = {
             title: "COMMUNITY",
             align: "align-right",
             items: [
-                { name: "공지사항", link: "#/community/notice" },
-                { name: "자유게시판", link: "#/community/free" },
-                { name: "1:1 CHAT", link: "#/community/chat", highlight: true }
+                { name: "공지사항", link: "/community/notice" },
+                { name: "자유게시판", link: "/community/free" },
+                { name: "1:1 CHAT", link: "/community/chat", highlight: true }
             ]
         },
         {
             title: "DEVLOG",
             align: "align-right",
             items: [
-                { name: "Update Log", link: "#/devlog/update" },
-                { name: "버그 신고", link: "#/devlog/bug-report" }
+                { name: "Update Log", link: "/devlog/update" },
+                { name: "버그 신고", link: "/devlog/bug-report" }
             ]
         }
     ],
     sidebarLinks: [
-        { name: "설치", link: "#/install" },
-        { name: "About Us", link: "#/about" },
+        { name: "설치", link: "/install" },
+        { name: "About Us", link: "/about" },
     ],
     actions: {
         notification: {
@@ -54,8 +54,8 @@ export const navData = {
         auth: {
             id: "auth-trigger-btn",
             ariaLabel: "계정 메뉴",
-            link: "#/account",
-            loginLink: "#/login" // 👈 이제 주소창에 #이 확실히 붙습니다!
+            link: "/account",
+            loginLink: "/login" // 👈 깔끔한 경로로 매칭됩니다!
         }
     }
 };
