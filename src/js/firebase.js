@@ -5,13 +5,12 @@ import { getFirestore } from "firebase/firestore";
 
 // 🔥 파이어베이스 콘솔(Project Settings > General)에서 복사해온 본인의 설정값 입력
 const firebaseConfig = {
-  apiKey: "AIzaSyDxY1VFF-Yk2Gb9IiS5O-9k4PE2-1G8_Jo",
-  authDomain: "aquila-forge.firebaseapp.com",
-  projectId: "aquila-forge",
-  storageBucket: "aquila-forge.firebasestorage.app",
-  messagingSenderId: "415485796165",
-  appId: "1:415485796165:web:0b5e95f73764bc962ea82c",
-  measurementId: "G-YMR7D3Q97B"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 
